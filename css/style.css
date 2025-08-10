@@ -5,7 +5,7 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #f5f7fb;
+  background: #cce0ff;
   color: #0f172a;
 }
 
@@ -41,7 +41,7 @@ label {
   margin-bottom: 6px;
 }
 
-input,
+input:not([type="file"]),
 select,
 textarea {
   width: 100%;
@@ -56,7 +56,7 @@ textarea {
   resize: vertical;
 }
 
-input:focus,
+input:not([type="file"]):focus,
 select:focus,
 textarea:focus {
   border-color: #2563eb;
@@ -106,11 +106,7 @@ form[enctype] label {
 }
 
 form[enctype] input[type="file"] {
-  flex: 1;
-  padding: 10px;
-  border: 1px dashed #cbd5e1;
-  border-radius: 8px;
-  background: #f8fafc;
+  all: revert;
 }
 
 @media (max-width: 720px) {
@@ -124,13 +120,6 @@ form[enctype] input[type="file"] {
 form label {
   font-weight: normal;
 }
-form>div:last-of-type {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
 
 form>div:last-of-type {
   grid-column: 1 / -1;
@@ -139,6 +128,7 @@ form>div:last-of-type {
   align-items: center;
   gap: 10px;
 }
+
 h1 {
   text-align: center;
   margin: 24px 0 12px;
@@ -156,50 +146,87 @@ h1 {
   white-space: pre-wrap;
 }
 
-#results+p {
-  text-align: center;
-  margin: 0;
-}
-h1 {
-  text-align: center;
-  margin: 24px 0 12px;
-}
-
-#results {
-  max-width: 520px;
-  margin: 0 auto 16px;
-  padding: 16px 20px;
-  border-radius: 12px;
-  background: #fff;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
-  line-height: 1.6;
-  font-size: .95rem;
-  white-space: pre-wrap;
-}
-
-
 #results br {
   display: block;
   margin: 6px 0;
 }
 
-
 #results+p {
   text-align: center;
   margin: 0;
 }
-body {
-  background-color: #cce0ff;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+
+fieldset {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
 }
 
-form {
-  background-color: #ffffff;
-  padding: 20px;
+legend {
+  font-weight: bold;
+}
+
+.inline-options label {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.inline-options input {
+  margin-left: 4px;
+}
+fieldset.inline-options legend {
+  font-weight: normal !important;
+}
+input[type="date"],
+input[type="color"] {
+  width: 100%;
+  height: auto;
+  padding: 10px 12px;
+  line-height: normal;
+  box-sizing: border-box;
+}
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+input[type="color"],
+select,
+textarea {
+  width: 100%;
+  height: 44px;
+ 
+  padding: 10px 12px;
+  border: 1px solid #cfd6e4;
   border-radius: 8px;
-  max-width: 600px;
-  margin: 40px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  box-sizing: border-box;
+}
+fieldset.inline-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+fieldset.inline-options legend {
+  font-weight: normal;
+  margin-bottom: 6px;
+  width: 100%;
+  text-align: left;
+}
+
+fieldset.inline-options label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: normal;
+  margin: 0 auto;
+ }
+#faveDay {
+  height: auto;
+  min-height: 120px;
 }
