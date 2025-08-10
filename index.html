@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="utf-8" />
+        <meta name="author" content="Jeongman Park" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Results</title>
+        <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+
+        <form action="results.html" method="GET">
+                <div>
+                        <label for="firstname">First Name</label>
+                        <input type="text" id="firstname" name="firstname" placeholder="First Name" required />
+                </div>
+
+                <div>
+                        <label for="lastname">Last Name</label>
+                        <input type="text" id="lastname" name="lastname" placeholder="Last Name" required />
+                </div>
+
+                <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email" required />
+                </div>
+
+                <div>
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" placeholder="Enter Age" required>
+                </div>
+
+                <div>
+                        <label for="date">Birthday</label>
+                        <input type="date" id="date" name="date" required />
+                </div>
+
+                <div>
+                        <label for="phoneNumber">Phone</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" />
+                </div>
+
+                <div>
+                        <p>Favorite Season:</p>
+                        <label>
+                                Winter
+                                <input type="checkbox" id="Winter" name="Winter" />
+                        </label>
+                        <label>
+                                Summer
+                                <input type="checkbox" id="Summer" name="Summer" />
+                        </label>
+                </div>
+
+                <div>
+                        <label for="username">User Name</label>
+                        <input type="text" id="username" name="username" placeholder="Username" required />
+                </div>
+
+                <div>
+                        <p>Do you prefer Nighttime or Daytime?</p>
+                        <label>
+                                Night
+                                <input type="radio" id="night" name="preference" value="Night" />
+                        </label>
+                        <label>
+                                Day
+                                <input type="radio" id="day" name="preference" value="Day" />
+                        </label>
+                </div>
+
+                <div>
+                        <label for="faveDay">Favorite Weekday</label>
+                        <select id="faveDay" name="faveDay" multiple>
+                                <option value="Monday">Monday</option>
+                                <option value="Tuesday">Tuesday</option>
+                                <option value="Wednesday">Wednesday</option>
+                                <option value="Thursday">Thursday</option>
+                                <option value="Friday" selected>Friday</option>
+                                <option value="Saturday">Saturday</option>
+                                <option value="Sunday">Sunday</option>
+                        </select>
+                </div>
+
+                <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Password" required />
+                </div>
+
+                <div>
+                        <label for="opinion">Tell us what you think</label>
+                        <textarea id="opinion" name="opinion"></textarea>
+                </div>
+
+                <div>
+                        <label for="webUrl">URL</label>
+                        <input type="url" id="webUrl" name="webUrl" />
+                </div>
+
+                <div>
+                        <label for="favecolor">Favorite Color</label>
+                        <input type="color" id="favecolor" name="favecolor" />
+                </div>
+
+                <input type="hidden" id="sessionId" name="sessionId" value="secretRandomNumberUsedtoManageTheSession" />
+
+                <div>
+                        <button type="reset">Reset</button>
+                        <button type="submit">Submit</button>
+                </div>
+        </form>
+
+        <div>
+                <form action="results.html" class="file-form" method="GET" enctype="multipart/form-data">
+                        <label for="fileUpload">Choose a file</label>
+                        <input type="file" id="fileUpload" name="fileUpload" />
+                        <button type="submit">Submit File</button>
+                </form>
+        </div>
+
+</body>
+
+</html>
